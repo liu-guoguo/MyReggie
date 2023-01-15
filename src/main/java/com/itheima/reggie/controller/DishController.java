@@ -13,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import sun.rmi.log.LogInputStream;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -110,11 +111,33 @@ public class DishController {
      * @return
      */
     @PutMapping
-    public R<DishDto> update(@RequestBody DishDto dishDto){
+    public R<String> update(@RequestBody DishDto dishDto){
         log.info(dishDto.toString());
 
         dishService.updateWithFlavor(dishDto);
 
-        return null;
+        return R.success("修改菜品成功");
     }
+
+    /**
+     * 根据条件来查询对应的菜品数据
+     * @param dish
+     * @return
+     */
+    @GetMapping("/list")
+    public R<List<Dish>> list(Dish dish){   //R是泛型，类似于数学的x
+        //构造查询条件
+        LambdaQueryWrapper<Dish> queryWrapper = new LambdaQueryWrapper();
+        queryWrapper.eq(dish.getCategoryId() != null,Dish::getCategoryId,dish.getCategoryId());
+        //查询状态为1的
+        queryWrapper.eq(Dish::getStatus,1);   //eq应该是查询那些条件匹配的数据
+        //添加排序条件
+        queryWrapper.orderByAsc(Dish::getSort).orderByDesc(Dish::getUpdateTime);
+
+        List<Dish> list = dishService.list(queryWrapper);
+
+        return R.success(list);
+    }
+
+
 }
