@@ -20,6 +20,7 @@ com\itheima\reggie\common\CustomException.class
 com\itheima\reggie\mapper\CategoryMapper.class
 com\itheima\reggie\mapper\EmployeeMapper.class
 com\itheima\reggie\entity\Setmeal.class
+com\itheima\reggie\mapper\AddressBookMapper.class
 com\itheima\reggie\service\impl\UserServiceImpl.class
 com\itheima\reggie\entity\Category.class
 com\itheima\reggie\mapper\UserMapper.class
@@ -31,9 +32,11 @@ com\itheima\reggie\controller\DishController.class
 com\itheima\reggie\controller\EmployeeController.class
 com\itheima\reggie\mapper\SetmealMapper.class
 com\itheima\reggie\service\CategoryService.class
+com\itheima\reggie\service\AddressBookService.class
 com\itheima\reggie\service\impl\CategoryServiceImpl.class
 com\itheima\reggie\controller\UserController.class
 com\itheima\reggie\service\DishService.class
+com\itheima\reggie\controller\AddressBookController.class
 com\itheima\reggie\mapper\SetmealDishMapper.class
 com\itheima\reggie\service\impl\EmployeeServiceImpl.class
 com\itheima\reggie\controller\SetmealController.class
@@ -41,7 +44,9 @@ com\itheima\reggie\utiles\SMSUtils.class
 com\itheima\reggie\dto\SetmealDto.class
 com\itheima\reggie\common\JacksonObjectMapper.class
 com\itheima\reggie\config\MybatisPlusConfig.class
+com\itheima\reggie\service\impl\AddressBookServiceImpl.class
 com\itheima\reggie\service\SetmealDishService.class
+com\itheima\reggie\entity\AddressBook.class
 com\itheima\reggie\controller\CommonController.class
 com\itheima\reggie\config\WebMvcConfig.class
 com\itheima\reggie\common\BaseContext.class
