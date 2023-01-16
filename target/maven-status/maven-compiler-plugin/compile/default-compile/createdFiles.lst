@@ -1,4 +1,5 @@
 com\itheima\reggie\common\GlobalExceptionHandler.class
+com\itheima\reggie\entity\ShoppingCart.class
 com\itheima\reggie\mapper\DishFlavorMapper.class
 com\itheima\reggie\service\EmployeeService.class
 com\itheima\reggie\service\UserService.class
@@ -20,10 +21,13 @@ com\itheima\reggie\common\CustomException.class
 com\itheima\reggie\mapper\CategoryMapper.class
 com\itheima\reggie\mapper\EmployeeMapper.class
 com\itheima\reggie\entity\Setmeal.class
+com\itheima\reggie\mapper\ShoppingMapper.class
 com\itheima\reggie\mapper\AddressBookMapper.class
 com\itheima\reggie\service\impl\UserServiceImpl.class
+com\itheima\reggie\service\ShoppingCartService.class
 com\itheima\reggie\entity\Category.class
 com\itheima\reggie\mapper\UserMapper.class
+com\itheima\reggie\service\impl\ShoppingCartServiceImpl.class
 com\itheima\reggie\entity\Dish.class
 com\itheima\reggie\service\impl\DishFlavorServiceImpl.class
 com\itheima\reggie\common\R.class
@@ -43,6 +47,7 @@ com\itheima\reggie\controller\SetmealController.class
 com\itheima\reggie\utiles\SMSUtils.class
 com\itheima\reggie\dto\SetmealDto.class
 com\itheima\reggie\common\JacksonObjectMapper.class
+com\itheima\reggie\controller\ShoppingCartController.class
 com\itheima\reggie\config\MybatisPlusConfig.class
 com\itheima\reggie\service\impl\AddressBookServiceImpl.class
 com\itheima\reggie\service\SetmealDishService.class
